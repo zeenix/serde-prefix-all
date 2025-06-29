@@ -21,8 +21,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Check build with MSRV
         run: |
-          cargo --locked check --tests --features serde
-          cargo --locked check --tests --no-default-features --features heapless,serde
+          cargo --locked check --tests --all-features
 
   fmt:
     runs-on: ubuntu-latest
