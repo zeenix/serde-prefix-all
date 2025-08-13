@@ -13,7 +13,7 @@ jobs:
       RUSTFLAGS: -D warnings
       MSRV: 1.81.0
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ env.MSRV }}
@@ -30,7 +30,7 @@ jobs:
       RUST_BACKTRACE: full
       RUST_LOG: trace
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@master
         with:
           # We use some nightly fmt options.
@@ -48,7 +48,7 @@ jobs:
       RUST_BACKTRACE: full
       RUST_LOG: trace
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
@@ -68,7 +68,7 @@ jobs:
       # Test in release mode
       PROFILE: release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
@@ -82,7 +82,7 @@ jobs:
     env:
       RUSTDOCFLAGS: -D warnings
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: stable
